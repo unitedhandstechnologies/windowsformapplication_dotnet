@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2CA0E49-7F71-4A15-B7D7-E77EC92010BF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SRPD</RootNamespace>
+    <AssemblyName>SRPD</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AAASecurity, Version=1.0.6053.28541, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\AAASecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="Ajax, Version=5.7.22.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Classes, Version=2.0.6032.31227, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="CourseRepository, Version=2.0.3488.21138, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\CourseRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="DPLocalization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\DPLocalization.dll</HintPath>
+    </Reference>
+    <Reference Include="DPTemplate2, Version=3.1.3.32080, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DPTemplate2.dll</HintPath>
+    </Reference>
+    <Reference Include="DUConfigurations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DUConfigurations.dll</HintPath>
+    </Reference>
+    <Reference Include="generalRepository, Version=2.0.3643.22375, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\generalRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="InstituteRepository, Version=2.0.5261.27987, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\InstituteRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PreExamClsLib, Version=3.1.2.31328, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PreExamClsLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PreExamV3WebCtrl, Version=3.1.1.26426, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PreExamV3WebCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ReportWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="RKLib.ExportData, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RKLib.ExportData.dll</HintPath>
+    </Reference>
+    <Reference Include="Sancharak, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sancharak.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerSideValidations, Version=2.0.4429.17473, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\ServerSideValidations.dll</HintPath>
+    </Reference>
+    <Reference Include="SOAAdmin, Version=1.0.3345.19058, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SOAAdmin.dll</HintPath>
+    </Reference>
+    <Reference Include="SOAClasses, Version=1.0.3337.29019, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DUReports\bin\SOAClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="SOADelivery, Version=1.0.3387.19415, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SOADelivery.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.2.20, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=3.2.52.56020, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TemplateRepository, Version=3.1.2.19581, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\TemplateRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="TripleDESEncryption, Version=1.0.6045.31909, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\TripleDESEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="UniversityPortal.XmlSerializers, Version=1.0.3638.24714, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\UniversityPortal.XmlSerializers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AppExceptionalSetting.xml" />
+    <Content Include="ColorPallete.ascx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\cal.gif" />
+    <Content Include="Images\calen.png" />
+    <Content Include="InnerMenuControl.ascx" />
+    <Content Include="LanguageOptions.ascx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="MenuControl.ascx" />
+    <Content Include="NewFooter.ascx" />
+    <Content Include="NewHeader.ascx" />
+    <Content Include="NewLeftMenuBar.ascx" />
+    <Content Include="NewTopMenuBar.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="PreExamination\Default1.aspx" />
+    <Content Include="PreExamination\LP_SRPD.aspx" />
+    <Content Include="PreExamination\PreExamV2_DefineSupervisor.aspx" />
+    <Content Include="PreExamination\PreExamV2_EventwiseSuperwiserConfiguration.aspx" />
+    <Content Include="PreExamination\PreExamV2_SearchWaterMark.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperDownload.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__1.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__2.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__3.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__4.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__5.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperUpload.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperUpload_Revised.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperUpload_Revised__1.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaperUpload__1.aspx" />
+    <Content Include="PreExamination\PreExamV2_SecureQuestionPaper_VenueConfiguration.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard__1.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard__2.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard__3.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard__4.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard__5.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard__6.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard__7.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_DashBoard__8.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_ImportPaperVenueFromExcel.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_ImportPaperVenueFromExcel__1.aspx" />
+    <Content Include="PreExamination\PreExamV2_SRPD_Import_VenuewiseSlotDownloadTime.aspx" />
+    <Content Include="PreExamination\Reports\PreExamV2_SRPD_PaperNotUploadedReport.aspx" />
+    <Content Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperDownloadReport.aspx" />
+    <Content Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperFeedback.aspx" />
+    <Content Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperUploadedReport.aspx" />
+    <Content Include="PreExamination\Reports\PreExamV2_SRPD_SuperVisorDetailsReport.aspx" />
+    <Content Include="PreExamination\ValidateOTP.aspx" />
+    <Content Include="PreExamination\WebCtrl\PreExamV2_EventWiseCourseSelection.ascx" />
+    <Content Include="PreExamination\WebCtrl\PreExamV2_SearchInstitute.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\clsDesignation.cs" />
+    <Compile Include="Classes\clsInstitute.cs" />
+    <Compile Include="Classes\ClsotherInstitute.cs" />
+    <Compile Include="Classes\clsReportsDashboard.cs" />
+    <Compile Include="Classes\clsImportFromExcel.cs" />
+    <Compile Include="Classes\clsSmsClient.cs" />
+    <Compile Include="Classes\clsSupervisor.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\Default1.aspx.cs">
+      <DependentUpon>Default1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\Default1.aspx.designer.cs">
+      <DependentUpon>Default1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\LP_SRPD.aspx.cs">
+      <DependentUpon>LP_SRPD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\LP_SRPD.aspx.designer.cs">
+      <DependentUpon>LP_SRPD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_DefineSupervisor.aspx.cs">
+      <DependentUpon>PreExamV2_DefineSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_DefineSupervisor.aspx.designer.cs">
+      <DependentUpon>PreExamV2_DefineSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_EventwiseSuperwiserConfiguration.aspx.cs">
+      <DependentUpon>PreExamV2_EventwiseSuperwiserConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_EventwiseSuperwiserConfiguration.aspx.designer.cs">
+      <DependentUpon>PreExamV2_EventwiseSuperwiserConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SearchWaterMark.aspx.cs">
+      <DependentUpon>PreExamV2_SearchWaterMark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SearchWaterMark.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SearchWaterMark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__1.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__1.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__2.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__2.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__3.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__3.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__4.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__4.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__5.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperDownload__5.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperDownload__5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperUpload.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperUpload.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperUpload_Revised.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperUpload_Revised.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperUpload_Revised.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperUpload_Revised.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperUpload_Revised__1.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperUpload_Revised__1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperUpload_Revised__1.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperUpload_Revised__1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperUpload__1.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperUpload__1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaperUpload__1.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaperUpload__1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaper_VenueConfiguration.aspx.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaper_VenueConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SecureQuestionPaper_VenueConfiguration.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SecureQuestionPaper_VenueConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__1.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__1.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__2.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__2.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__3.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__3.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__4.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__4.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__5.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__5.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__6.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__6.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__7.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__7.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__8.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_DashBoard__8.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_DashBoard__8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_ImportPaperVenueFromExcel.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_ImportPaperVenueFromExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_ImportPaperVenueFromExcel.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_ImportPaperVenueFromExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_ImportPaperVenueFromExcel__1.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_ImportPaperVenueFromExcel__1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_ImportPaperVenueFromExcel__1.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_ImportPaperVenueFromExcel__1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_Import_VenuewiseSlotDownloadTime.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_Import_VenuewiseSlotDownloadTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\PreExamV2_SRPD_Import_VenuewiseSlotDownloadTime.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_Import_VenuewiseSlotDownloadTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_PaperNotUploadedReport.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_PaperNotUploadedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_PaperNotUploadedReport.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_PaperNotUploadedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperDownloadReport.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_QuestionPaperDownloadReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperDownloadReport.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_QuestionPaperDownloadReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperFeedback.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_QuestionPaperFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperFeedback.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_QuestionPaperFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperUploadedReport.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_QuestionPaperUploadedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_QuestionPaperUploadedReport.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_QuestionPaperUploadedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_SuperVisorDetailsReport.aspx.cs">
+      <DependentUpon>PreExamV2_SRPD_SuperVisorDetailsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\Reports\PreExamV2_SRPD_SuperVisorDetailsReport.aspx.designer.cs">
+      <DependentUpon>PreExamV2_SRPD_SuperVisorDetailsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreExamination\ValidateOTP.aspx.cs">
+      <DependentUpon>ValidateOTP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreExamination\ValidateOTP.aspx.designer.cs">
+      <DependentUpon>ValidateOTP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_GlobalResources\" />
+    <Folder Include="bin\" />
+    <Folder Include="PreExamination\ImportFromExcelFile\" />
+    <Folder Include="PreExamination\TempDirectory\Verificationfolder\Decrypt\" />
+    <Folder Include="PreExamination\TempDirectory\Verificationfolder\Encrypt\" />
+    <Folder Include="PreExamination\TempDirectory\Verificationfolder\Watermark\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="New_Home.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PreExamination\Reports\RDLC\paperVenue.rdlc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

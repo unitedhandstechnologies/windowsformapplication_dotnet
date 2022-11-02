@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%@ Master Language="C#" CodeBehind="Home.master.cs" AutoEventWireup="true" Inherits="DPTemplate2.Home" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="~/NewHeader.ascx" TagPrefix="Uc1" TagName="Header" %>
+<%@ Register Src="~/NewTopMenuBar.ascx" TagPrefix="Uc1" TagName="TopLink" %>
+<%@ Register Src="~/NewLeftMenuBar.ascx" TagPrefix="Uc1" TagName="SideLink" %>
+<%@ Register Src="~/NewFooter.ascx" TagPrefix="Uc1" TagName="Footer" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <%=Classes.clsGetSettings.Name%></title>
+    <link href="Messaging/CSS/samvadini.css" rel="stylesheet" type="text/css" />
+    <link href="Messaging/CSS/report.css" rel="stylesheet" type="text/css" />
+    <link href="Messaging/CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/template.css" type="text/css" rel="stylesheet" />
+    <link href="/CSS/portal.css" type="text/css" rel="stylesheet" />
+    <script language="javascript" type="text/javascript" src="/jscript/jquery-latest.js"></script>
+        
+    <script language="javascript" src="/jscript/jscript_validations.js" type="text/javascript"></script>
+
+    <script language="javascript" src="/jscript/changescheme.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        setStyle();
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div align="center" style="width: 100%; padding-top: 5px;">
+        <div id="main" align="center">
+            <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" ScriptMode="Release"
+                CombineScripts="false" EnablePageMethods="true" />
+            <div>
+                <!--- Header Starts --->
+                <Uc1:Header ID="headerCtrl" runat="Server"></Uc1:Header>
+                <!--- Header Ends --->
+                <!-- TopMenuBar Starts --->
+                <Uc1:TopLink ID="TopLinkctrl" runat="Server"></Uc1:TopLink>
+                <div style="position: relative;" id="PhotoHolder">
+                    <!--This div is required for Photo display control left position in admissions project. Should not be removed.-->
+                </div>
+                <!--- TopMenuBar Ends --->
+                <div>
+                    <table width="100%" cellpadding="0" cellspacing="0" style="clear: both;">
+                        <tr>
+                            <td id="TDLeftMenuHolder" valign="top" align="center">
+                                <div style="padding-top: 08px; min-height: 400px;">
+                                    <div id="imageHolder" class='clDCLogo'>
+                                        &nbsp;</div>
+                                    <!-- <div><asp:image id="imgContainer" runat="server" visible="False" /></div>
+                                <div><asp:label id="lblNameleftSd" runat="server" style="color: Black; text-align: justify"></asp:label></div>
+                                -->
+                                    <!-- LeftSide Menu Starts --->
+                                    <div>
+                                        <Uc1:SideLink ID="SideLinkctrl" runat="server"></Uc1:SideLink>
+                                        <div style="position: relative;" id="StatusHolder">
+                                            <!--This div is required for student status control left position in admissions project. Should not be removed.-->
+                                        </div>
+                                    </div>
+                                    <!-- LeftSide Menu Ends --->
+                                </div>
+                            </td>
+                            <td valign="top">
+                                <div id="contentPlaceHolder">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Starts --->
+        <div>
+            <Uc1:Footer ID="FooterCtrl" runat="server"></Uc1:Footer>
+        </div>
+        <!-- Footer Ends --->
+    </form>
+</body>
+</html>
+<script>
+    //document.getElementById("DCImage").setAttribute("src","<%=Classes.clsGetSettings.SitePath%>Images/CoomingSoon.gif");
+</script>
