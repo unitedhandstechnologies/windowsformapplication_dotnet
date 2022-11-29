@@ -1,0 +1,279 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="New_Home.master.cs" Inherits="DPTemplate2.New_Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title><%=Classes.clsGetSettings.Name%></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+    <link rel="stylesheet" type="text/css" href="../New_CSS/dataTables.responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../New_CSS/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../New_CSS/jnoty.css"/>
+    <link rel="stylesheet" type="text/css" href="../New_CSS/template.css" />
+    <link rel="stylesheet" type="text/css" href="../New_CSS/new-ui-menu.css" />
+    <link rel="stylesheet" type="text/css" href="../New_CSS/fontawesome-all.min.css" />
+    <script type="text/javascript" src="/New_JS/jquery-1.11.1.min.js"></script> 
+
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+        function search_onclick() {
+
+        }
+
+// ]]>
+    </script>
+</head>
+<body class="dashboard">
+    <form class="main" id="ContentPageMPC" runat="server" method="post">
+    <div class="main">
+        <div class="container-fluid">
+            <!--Header Starts Here-->
+            <div class="header1 row">
+                <div class="col-md-6 logo-holder">
+                    <div class="holder">
+                        <a id="logo" href="../New_Home.aspx">
+                        <div class="row">
+                                <div class="col-md-1">
+                                     <img id="Image1" runat="server" />
+
+                                </div>
+                                <div class="col-md-11">
+                                    <p><asp:Label ID="lblName" runat="server"></asp:Label></p>
+									<p class="address"><asp:Label ID="lblAddress" runat="server" class="address"></asp:Label></p>
+                                </div>
+                            </div>
+                           
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 header-right desktopMenu">
+                    <div class="user-settings">
+                        <nav class="top-menu">
+                            <ul class="menu-new">
+                            <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" ScriptMode="Release"
+                CombineScripts="false" EnablePageMethods="true" />
+                                <li class="active"><a id="lnkHome" data-toggle="tooltip" data-placement="bottom" title="Home" ><i class="fa fa-home"></i><span>Home</span></a></li>
+                                <li><a id="lnkCalendar" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="fa fa-calendar">  </i><span> Calendar</span></a></li>
+                                <li><a id="lnkSiteMap" data-toggle="tooltip" data-placement="bottom" title="Sitemap"><i class="fa fa-sitemap"> </i><span> Sitemap</span></a></li>
+                                <li><a id="lnkContact" data-toggle="tooltip" data-placement="bottom" title="Contact Us"><i class="fa  fa-phone"> </i><span > Contact Us</span></a></li>
+                            </ul>
+                        </nav>
+                        <div class="welcome-box">
+                            <span class="welcome">Welcome <div style="display:none" id="divLoginUserName" runat="server"><asp:label id="lblLoginUserName" runat="server"></asp:label> !</div></span> 
+                            <p><span class="latlogin">last logon : </span><span  class="latlogin"><asp:Label ID="lblLastLogonDate" runat="server"></asp:Label></span></p>
+                        </div>
+                        <div class="profile btn-group">
+                            <a class=" dropdown-toggle" data-toggle="dropdown" href="#">
+                                <div class="display-info pd-l-r">
+                                    <img id="imgProfile" runat="server">
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu profile pull-right arrow_box">
+                                <li class="border-top"><a id="lnkMyLogin"><i class="fa fa-user"></i>My Login</a></li>
+                                <li><a id="lnkSettings"><i class="fa fa-gear"></i>My Settings</a> </li>
+                                <li><a id="lnkLogout"><i class="fa fa-power-off"></i>Log Out</a> </li>
+                            </ul>
+                        </div>
+                        <div class="module-menu btn-group">
+                            <a class=" btn-toggleright dropdown-toggle bt-cl" data-toggle="dropdown" href="#"><i
+                                class="fa fa-th "></i></a>
+                            <div class="dropdown-menu profile pull-right arrow_box tiles">
+                                <div class="outer">
+                                    <ul>
+                                        <asp:Repeater ID="RepeaterDropDownMenu" runat="server" OnItemDataBound="RepeaterDropDownMenu_ItemBound">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <asp:HyperLink ID="HypDropDownModule" runat="server">
+                                                        <div class="tile">
+                                                            <div class="tile-body">
+                                                                <asp:Literal ID="liDropModuleImage" runat="server"></asp:Literal>
+                                                            </div>
+                                                            <div class="tile-object">
+                                                                <div class="name">
+                                                                    <%#Eval("Short_Name")%>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </asp:HyperLink>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Header Ends Here-->
+            <div class="content row">
+                <div class="wrapper">
+                    <!--Left MenuBar stats here-->
+                    <div class="left-sidebar">
+                        <div class="left-menu">
+                            <a class="btn btn-toggleleft nav-button-col" href="#"><i class="fa fa-align-left"></i>
+                            </a>
+                            <ul class="top-left-menu">
+                                <li><a href="" title="User" data-toggle="tooltip" data-placement="top"><i class="fa fa-user">
+                                </i></a></li>
+                                <li><a id="lnkLMCalendar" title="Calendar" data-toggle="tooltip" data-placement="top"><i class="fa fa-calendar">
+                                </i></a></li>
+                                <li><a href="" title="Notification" data-toggle="tooltip" data-placement="top"><i
+                                    class="fa fa-bell"></i></a></li>
+                                <li><a href="" title="Documents" data-toggle="tooltip" data-placement="top"><i class="fa fa-file">
+                                </i></a></li>
+                            </ul>
+                        </div>
+                        <div class="holder">
+                            <nav class="navbar navbar-default" role="navigation">
+                                <!-- <div class="container-fluid"> -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#collapse-main-menu"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                                    <!--  <a class="navbar-brand" href="#">Main Menu</a> --></div>
+                                <!-- mobile menu, profile, module -->
+                                <div id="mobMenu"></div>
+                                <!-- //mobile menu, profile, module -->
+                                <!--Link for Previous Page-->
+                                <div class="collapse navbar-collapse" id="collapse-main-menu">
+                                   <div id="divpreviouspage" class="previous-page" runat="server">
+                                        <ul class="nav main-menu">
+                                            <li class=""><asp:HyperLink id="hypPreviousPage" runat="server"><i class="fa fa-angle-left a-left"> </i><span class="nv-text"><asp:Literal ID="liPreviousPage" runat=server></asp:Literal></span></asp:HyperLink>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <ul class="nav main-menu" id="mainMenu">
+                                      <asp:Repeater ID="ParentRepeaterLeftMenu" runat="server" onitemdatabound="ItemBound">
+                                        <ItemTemplate>
+                                            <li class=""><asp:HyperLink ID="ParentMenu" runat="server"><asp:literal ID="lblApplyImage" runat="server"></asp:literal> <span class="nv-text"><%#Eval("Name")%></span> <asp:Literal id="lblApplyClass" runat="server"></asp:Literal></asp:HyperLink>
+                                            <%--<li class=""><a href="#"><i class="fa fa-home"></i><span class="nv-text"></i> <span class="nv-text"><%#Eval("Name")%></span><i class="down fa fa-angle-left "></i></a>--%>
+                                            <ul class="dropdown-menu hideMe min">
+                                            <asp:Repeater ID="ChildRepeaterLeftMenu" runat="server">
+                                                <ItemTemplate>
+                                                        <li><a href="<%=Classes.clsGetSettings.SitePath%><%#Eval("Module_Key")%>/<%#Eval("MenuUrl")%>"><%# DataBinder.Eval(Container.DataItem, "Name") %></a></li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                            </ul>
+                                            </li>
+                                        </ItemTemplate>
+                                     </asp:Repeater>
+
+                                    </ul>
+                                  
+                                </div>
+
+                                  
+                                <!-- </div> -->
+                            </nav>
+                        </div>
+                    </div>
+                    <!--Left MenuBar ends here-->
+                    <!--Main Content Starts here-->
+                    <div class="main-content">
+                        <div class="page-header">
+                            <div class="col-md-8">
+                               
+                                <div class="row" style="color:#ec8502"><b><asp:Label ID="lblInstituteName" runat="server" ></asp:Label></b></div>
+                                <div class="row"><i><asp:Label ID="lblPageHeader" runat="server"></asp:Label><asp:Label ID="lblSubHeader" runat="server"></asp:Label></i></div>
+                               
+                            </div>
+                            <div class="box">
+                                <div class="container-4">
+                                    <input type="search" id="search" placeholder="Search menu...(coming soon))"/>
+                                    <button class="icon" disabled>
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="holder">
+                           
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                           
+                          </div>
+                            <!--Footer Starts Here -->
+                            <div class="footer">
+                                <div class="row">
+                                    <div class="col-md-12 copyright">
+                                        <ul>
+                                            <li><a id="lnkPhotoGallary">Photo Gallery</a></li>
+                                            <li><a id="lnkVTour">Visual Tour </a></li>
+                                            <li><a id="lnkSuggestions">Suggestion </a></li>
+                                            <li><a id="lnkRequestInfo">Request </a></li>
+                                            <li><a id="lnkRegisterComplaint">Info Complaints </a></li>
+                                            <li><a id="lnkDisplayFAQ">FAQ </a></li>
+                                            <li><a id="lnkDisclaimer">Disclaimer</a></li>
+                                        </ul>
+                                        <div class="holder">
+                                            Copyright &copy; 2016 Maharashtra Knowledge Corporation Limited. All Rights Reserved.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End of Footer-->
+                        
+                        <!--Main Content Ends here-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <input id="hid_MenuID" type="hidden" runat="server" />
+    <input id="hid_ModuleKey" type="hidden" runat="server" />
+    <input id="hid_MenuTypeIdentifier" type="hidden" runat="server" />
+    <input id="hid_CommandArgument" type="hidden" runat="server" />
+</body>
+
+<script type="text/javascript" src="/New_JS/bootstrap.min.js"></script>
+<script type="text/javascript" src="/New_JS/jquery.dataTables.js"></script>
+<script type="text/javascript" src="/New_JS/jscript_validations.js"></script>
+<script type="text/javascript" src="/New_JS/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="/New_JS/bootstrap-datepicker.min.js"/>
+<script type="text/javascript" src="/New_JS/dataTables.responsive.js"></script>
+<script type="text/javascript" src="/New_JS/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="/New_JS/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="/New_JS/jnoty.js"></script>
+<script type="text/javascript" src="/New_JS/custom.js"></script>
+
+<script type="text/javascript" >
+    $(function () {
+        $('.datepicker1').datepicker({
+            format: "dd/mm/yyyy",
+            language: "es",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+
+    });
+</script>
+<script type="text/javascript" language="javascript">
+    document.getElementById("lnkPhotoGallary").setAttribute("href", "<%=sSitePath%>PhotoGallary.aspx");
+    document.getElementById("lnkVTour").setAttribute("href", "<%=sSitePath%>VisualTour.aspx");
+    document.getElementById("lnkSuggestions").setAttribute("href", "<%=sSitePath%>Suggestions.aspx");
+    document.getElementById("lnkRequestInfo").setAttribute("href", "<%=sSitePath%>RequestInfo.aspx");
+    document.getElementById("lnkRegisterComplaint").setAttribute("href", "<%=sSitePath%>RegisterComplaint.aspx");
+    document.getElementById("lnkDisplayFAQ").setAttribute("href", "<%=sSitePath%>DisplayFAQ.aspx");
+    document.getElementById("lnkDisclaimer").setAttribute("href", "<%=sSitePath%>Disclaimer.aspx");
+
+    document.getElementById("lnkHome").setAttribute("href", "<%=sSitePath%>Home.aspx");
+    document.getElementById("lnkCalendar").setAttribute("href", "<%=sSitePath%>CalendarDisplay.aspx");
+    document.getElementById("lnkSiteMap").setAttribute("href", "<%=sSitePath%>SiteMap.aspx");
+    document.getElementById("lnkContact").setAttribute("href", "<%=sSitePath%>ContactUs.aspx");
+
+    document.getElementById("lnkMyLogin").setAttribute("href", "<%=sSitePath%>Home.aspx");
+    document.getElementById("lnkSettings").setAttribute("href", "<%=sSitePath%>MySettings.aspx");
+    document.getElementById("lnkLogout").setAttribute("href", "<%=sSitePath%>Logout.aspx");
+
+    document.getElementById("lnkLMCalendar").setAttribute("href", "<%=sSitePath%>CalendarDisplay.aspx");
+   
+
+
+   
+</script>
+</html>

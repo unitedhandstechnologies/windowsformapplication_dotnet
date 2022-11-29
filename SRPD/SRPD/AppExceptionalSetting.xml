@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Exceptionals>
+    <ExceptionalModules>
+
+      <ExceptionalModule>PreExamination</ExceptionalModule>
+		<ExceptionalModule>PreExaminationV3</ExceptionalModule>
+		
+    </ExceptionalModules>
+    <ExceptionalPages>
+        <ExceptionalPage>DEFAULT</ExceptionalPage>
+        <ExceptionalPage>PreExamV2_EventMaster</ExceptionalPage>
+        <ExceptionalPage>PreExamv2_Index</ExceptionalPage>
+        <ExceptionalPage>BOOKIMAGETEMP</ExceptionalPage>
+        <ExceptionalPage>ONERRORSHOW</ExceptionalPage>
+        <ExceptionalPage>BookInterimImageTemp</ExceptionalPage>        
+    </ExceptionalPages>
+</Exceptionals>

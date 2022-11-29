@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <AdmissionChannels>
+    <AdmissionChannel>
+      <ID>999</ID>
+      <ModuleKey>onlineadmissions</ModuleKey>
+      <NavigationKey>OnlineAdmission</NavigationKey>
+      <!--<NavigationKey>DistanceAdmission</NavigationKey>-->
+    </AdmissionChannel>
+    <AdmissionChannel>
+      <ID>999</ID>
+      <ModuleKey>onlineadmissions</ModuleKey>
+      <NavigationKey>DistanceAdmission</NavigationKey>
+    </AdmissionChannel>
+    <AdmissionChannel>
+      <ID>998</ID>
+      <ModuleKey>ExternalAdmissions</ModuleKey>
+      <NavigationKey>ExternalAdmission</NavigationKey>
+    </AdmissionChannel>
+  </AdmissionChannels>
+
+  <!--<AdmissionModes>-->
+  <!--<AdmissionMode>
+      <ID>3</ID>
+      <Text>Online Admissions</Text>-->
+
+  <ModeOfLearnings>
+
+    <ModeOfLearning>
+      <ID>1</ID>
+      <Text>Regular</Text>
+      <AdmissionMode>3</AdmissionMode>
+      <ExamCenter>N</ExamCenter>
+      <PCPCenter>N</PCPCenter>
+      <Fee>Y</Fee>
+      <PaymentOptions>
+        <PaymentOption>
+          <Text>Demand Draft</Text>
+          <ID>DD</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cheque</Text>
+          <ID>CQ</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cash Deposit at Bank (Challan/Deposit Slip)</Text>
+          <ID>BC</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cash Deposit at University</Text>
+          <ID>C</ID>
+        </PaymentOption>
+        <!--<PaymentOption>
+        <Text>Online Payment</Text>
+        <ID>OP</ID>
+      </PaymentOption>-->
+      </PaymentOptions>
+    </ModeOfLearning>
+
+    <ModeOfLearning>
+      <ID>2</ID>
+      <Text>External</Text>
+      <AdmissionMode>4</AdmissionMode>
+      <ExamCenter>N</ExamCenter>
+      <PCPCenter>Y</PCPCenter>
+      <Fee>Y</Fee>
+      <PaymentOptions>
+        <PaymentOption>
+          <Text>Demand Draft</Text>
+          <ID>DD</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cheque</Text>
+          <ID>CQ</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cash Deposit at Bank (Challan/Deposit Slip)</Text>
+          <ID>BC</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cash Deposit at University</Text>
+          <ID>C</ID>
+        </PaymentOption>
+        <!--<PaymentOption>
+        <Text>Online Payment</Text>
+        <ID>OP</ID>
+      </PaymentOption>-->
+      </PaymentOptions>
+    </ModeOfLearning>
+
+    <ModeOfLearning>
+      <ID>4</ID>
+      <Text>Open Education</Text>
+      <AdmissionMode>5</AdmissionMode>
+      <ExamCenter>N</ExamCenter>
+      <PCPCenter>N</PCPCenter>
+      <Fee>Y</Fee>
+      <PaymentOptions>
+        <PaymentOption>
+          <Text>Demand Draft</Text>
+          <ID>DD</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cheque</Text>
+          <ID>CQ</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cash Deposit at Bank (Challan/Deposit Slip)</Text>
+          <ID>BC</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cash Deposit at University</Text>
+          <ID>C</ID>
+        </PaymentOption>
+        <!--<PaymentOption>
+        <Text>Online Payment</Text>
+        <ID>OP</ID>
+      </PaymentOption>-->
+      </PaymentOptions>
+    </ModeOfLearning>
+
+    <ModeOfLearning>
+      <ID>3</ID>
+      <Text>Distance Education</Text>
+      <AdmissionMode>6</AdmissionMode>
+      <ExamCenter>Y</ExamCenter>
+      <PCPCenter>Y</PCPCenter>
+      <Fee>Y</Fee>
+      <PaymentOptions>
+        <PaymentOption>
+          <Text>Demand Draft</Text>
+          <ID>DD</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cheque</Text>
+          <ID>CQ</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cash Deposit at Bank (Challan/Deposit Slip)</Text>
+          <ID>BC</ID>
+        </PaymentOption>
+        <PaymentOption>
+          <Text>Cash Deposit at University</Text>
+          <ID>C</ID>
+        </PaymentOption>
+        <!--<PaymentOption>
+        <Text>Online Payment</Text>
+        <ID>OP</ID>
+      </PaymentOption>-->
+      </PaymentOptions>
+    </ModeOfLearning>
+
+  </ModeOfLearnings>
+
+  <!--</AdmissionMode>-->
+
+  <!--<AdmissionMode>
+      <ID>6</ID>
+      <Text>Distance Admissions</Text>
+      <ModeOfLearnings>
+        <ModeOfLearning>
+          <ID>3</ID>
+          <Text>Distance Education</Text>
+        </ModeOfLearning>
+      </ModeOfLearnings>
+    </AdmissionMode>
+    <AdmissionMode>
+      <ID>4</ID>
+      <Text>External Admissions</Text>
+      <ModeOfLearnings>
+        <ModeOfLearning>
+          <ID>2</ID>
+          <Text>External</Text>
+        </ModeOfLearning>
+      </ModeOfLearnings>
+    </AdmissionMode>-->
+  <!--</AdmissionModes>-->
+
+  <HomeState>
+    <ID>12</ID>
+    <Text>Gujarat</Text>
+  </HomeState>
+
+  <HomeCountry>
+    <ID>107</ID>
+    <Text>India</Text>
+  </HomeCountry>
+
+  <OnlyGenderAllowed>
+    <ID>2</ID>
+    <Text>Female</Text>
+  </OnlyGenderAllowed>
+
+  <HomeBoards>
+    <HomeBoard>
+      <ID></ID>
+      <Text>Maharashtra State Board</Text>
+    </HomeBoard>
+    <HomeBoard>
+      <ID></ID>
+      <Text>CBSE</Text>
+    </HomeBoard>
+    <HomeBoard>
+      <ID></ID>
+      <Text>ICSE</Text>
+    </HomeBoard>
+  </HomeBoards>
+
+  <HomeUniversities>
+    <HomeUniveristy>
+      <ID></ID>
+      <Text>Staging</Text>
+    </HomeUniveristy>
+  </HomeUniversities>
+
+  <FreeshipEligibility>
+    <Criteria>
+      <Criterion>
+        <Text>Non-Home State Board/University</Text>
+      </Criterion>
+      <Criterion>Reservation Category</Criterion>
+      <Criterion>Is Employed</Criterion>
+    </Criteria>
+  </FreeshipEligibility>
+  
+<!--added by garima 28 aug 2012 
+Elements inside <Mandatory> tag are one of the fields name which are used by admission module
+and the Flag 'N' sets that its not mandatory to enter data against this field and 'Y' flag 
+sets its vice versa
+-->
+  <MandatoryFields>
+    <Mandatory>
+      <Receipt_no>N</Receipt_no>
+      <Receipt_Date>Y</Receipt_Date>
+      <SSCQualification>N</SSCQualification>
+      <DegOutOfMarks>N</DegOutOfMarks>
+    </Mandatory>
+  </MandatoryFields>
+
+  <PreExamination>
+    <SRPD>
+      <DownloadTime>30</DownloadTime>
+    </SRPD>    
+  </PreExamination>
+  
+</Root>
